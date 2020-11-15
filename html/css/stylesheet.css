@@ -1,0 +1,114 @@
+html, body{
+    width:100%;
+    height:100%;
+    background-color:transparent!important;
+
+    overflow:hidden;
+
+    user-select: none;
+}
+#keymaster-container{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+#keymaster-keycontainer{
+    background-image:linear-gradient(90deg, transparent, rgba(255,255,255,0.6));
+}
+#keymaster-field{
+    display:none;
+
+    position:absolute;
+    left:51%;
+    bottom:20%;
+    transform: translateX(-51%);
+
+    width:100%;
+}
+#keymaster-point{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-transform: uppercase;
+    border-radius: .5rem;
+    border:5px solid #333;
+    width:128px;
+    height:128px;
+    background-color:transparent!important;
+
+    margin-left:20%;
+    z-index:9999!important;
+}
+#keymaster-score{
+    font-size:4rem;
+    mix-blend-mode: exclusion;
+    color:#333;
+    background-color:rgba(255, 255, 255, 0.6);
+    padding:1rem;
+    border-top-left-radius:.825rem;
+    border-top-right-radius: .825rem;
+}
+#keymaster-timer{
+    background-color:rgba(255, 255, 255, 0.6);
+    padding:1rem;
+    border-bottom-left-radius:.825rem;
+    border-bottom-right-radius: .825rem;
+}
+.keymaster-key{
+    width:128px;
+    height:128px;
+
+    position:absolute;
+    top:50%;
+
+    transform:translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index:1!important; 
+    background: #eff0f2;
+    border-radius: .5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0 0 25px #e8e8e8, 0 1px 0 #c3c3c3, 0 2px 0 #c9c9c9, 0 2px 3px #333;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
+
+}
+.keymaster-key > span{
+    font: bold 48px arial, sans-serif;
+    background-color: #565656;
+    color: transparent;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.2);
+    -webkit-background-clip: text;
+        -moz-background-clip: text;
+            background-clip: text;
+    text-transform: uppercase;
+}
+#keymaster-point-char{
+    font-size:2rem;
+    color:#333;
+}
+#keymaster-overlay{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+
+    backdrop-filter: blur(10px);
+}
+#keymaster-countdown{
+    position:absolute;
+    top:51%;
+    left:51%;
+    transform:translate(-51%, -51%);
+
+    font-size:5rem;
+    color:var(--light);
+}
