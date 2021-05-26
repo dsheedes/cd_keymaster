@@ -105,6 +105,9 @@ function generateKeys(keylist){
 function endGame(status, message){
     clearInterval(game);
     settings.speed = settings.baseSpeed;
+    
+    mistake = 0;
+    
     if(status)
         gameSuccess = true;
     else gameSuccess = false;
