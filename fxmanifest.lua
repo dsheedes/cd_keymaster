@@ -1,13 +1,12 @@
-fx_version 'bodacious'
-games { 'gta5' }
+fx_version 'cerulean'
+game 'gta5'
+author 'discord.gg/codesign'
+description 'Codesign KeyMaster Mini-Game'
+version '1.0.0'
+lua54 'yes'
 
-author 'Codesign#2715'
-description 'KeyMaster Mini-Game'
-version '1.0'
-
-client_scripts {
-    'client/*.lua',
-}
+client_script 'client/client.lua'
+server_script 'server/version_check.lua'
 
 ui_page {
     'html/index.html',
