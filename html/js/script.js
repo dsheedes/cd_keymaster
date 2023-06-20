@@ -52,7 +52,8 @@ let keys = [{
     right:-128,
     controlled:false,
     shown:false
-}]
+}];
+
 function openModal(title, body){
     if(title)
         $("#keymaster-info-title").html(title);
@@ -120,7 +121,7 @@ function endGame(status, message){
         let u = "fail";
         if(status)
             u = "success";
-        xhr.open("POST", `http://cd_keymaster/${u}`, true);
+        xhr.open("POST", `https://cd_keymaster/${u}`, true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify({}));
     }
@@ -287,7 +288,7 @@ $('#keymaster-info').on('hide.bs.modal', () => {
         else u = "fail";
     }
 
-    xhr.open("POST", `http://cd_keymaster/${u}`, true);
+    xhr.open("POST", `https://cd_keymaster/${u}`, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify({}));
 });
